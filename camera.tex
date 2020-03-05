@@ -1,11 +1,11 @@
 \section{ASTRI-Horn telescope} 
 The ASTRI-Horn telescope is based on a dual mirror system in Schawrzschild-Couder configuration
-with a wide field of view (FoV) of 9.6$^\circ$ and a focal length of 2.15 m. 
+with a focal length of 2.15 m and a wide field of view (FoV) of 9.6$^\circ$. 
 The primary mirror, 4.3 m diameter, is segmented in 18 hexagonal panels, 
 while the secondary mirror, 2.2 m diameter, is a monolitic hemispherical thick glass shell. 
 Dedicated measurements  with an optical CCD camera showed that the
 point spread function (PSF) has a constant width of a few arcmin
-over the whole FoV and that  90\% of the PSF  is containerd in one camera pixel. 
+over the whole FoV and that  90\% of the PSF  is containerd in one camera pixel (ref). 
 
 The focal surface camera, has a convex-shaped structure where
 photon detection modules (PDMs), that are square flat modules, are symmetrically placed
@@ -15,50 +15,29 @@ Each PDM, composed of 8$\times$8 side-by-side Silicon photomultipliers (SiPMs),
 is installed on a printed circuit board (PCB)  of the same dimension.
 The PCB hosts the front-end electronics (FEE) composed by
  two application specific integrated circuits (ASIC) for the SiPM signal read out,
-four Analogue-to-Digital Converters (ADC) and one Field Programmable
-Gate Array (FPGA). This FEE-FPGA manages the ASICs slow control,
+four analogue-to-digital converters (ADC) and one field programmable
+gate array (FPGA). This FEE-FPGA manages the ASICs slow control,
 the generation of local trigger and the data analog-to-digital conversion \cite{Sottile2016}.
- Images of the Polaris Star at different off-axis angles (up to 4.5◦
-) have been taken with an optical
-CCD camera able to scan the whole FoV, demonstrating that the
-point spread function (PSF) has a constant width of a few arcmin
-over the whole FoV.
-Since the SC optical design typically results in a small
-plate scale (37.5 mm/
-◦
-in the case of ASTRI), the camera at
-the focal plane is characterized by compact dimensions over a
-large FoV. F Back-End Electronics (BEE) is composed of two main parts that are
-a Processing System (PS) and a Programmable Logic (PL). 
-It is the main elaboration unit of the camera which
+The back-end electronics (BEE) is the main elaboration unit of the camera which
 controls and manages the overall system, including data, and
 all ancillaries used to perform operations as
-the camera thermal regulation, 
-the Voltage Distribution management and the time events stamping.
-The BEE also provides the functions necessary to
-process and transmit the event data as 
-obtained by the FEE to an external Data Acquisition 
-Workstation responsible for receiving and storing
-the data packets(see Sect.4 (\cite{Sottile2016}).
+the camera thermal regulation, the voltage distribution management and the time events stamping.
+The BEE also provides the functions necessary to process and transmit the event data as 
+obtained by the FEE to an external data acquisition 
+workstation responsible for receiving and storing the data packets \cite{Sottile2016}.
 In order to protect the camera sensors from the external
-atmospheric environment, an optical-UV transparent
-Poly Methyl MethAcrylate (PMMA)  window 
-is mounted onto the focal surface support structure covering all the
-PDMs.
-This window is modeled with the same radius of
-curvature of the focal surface (see Sect.2 (\cite{Catalano2018}).
+atmospheric environment, an optical-UV transparent poly methyl methacrylate (PMMA)  window 
+is mounted onto the focal surface support structure covering all the PDMs.
+This window is modeled with the same radius of curvature of the focal surface \cite{Catalano2018}.
+The ASTRI SST-2M camera is also equipped  with a light-tight lid to prevents accidental sunlight 
+exposure of the focal surface detectors.
+The camera is thermally controlled to keep the working temperature on the focal plane within the range 13-17$^\circ$C
+for maintaing a goopd gain stability.
+
 A side emitting Fiber Optics system(FOC) is located  along the PMMA 
 circumference. It is illuminated by a Light Emitting Diode (LED) 
 system and used for the on-field relative calibration of the gain. 
 Its light uniformly illuminates the PDMs units at a controlled intensity.
-The ASTRI SST-2M camera
-is equipped also with a light-tight lid composed of two petals
-mounted onto the backbone structure of the camera. 
-This prevents accidental sunlight exposure of the focal surface
-detectors, catastrophic in case of direct light reflected
-by the mirrors.  
-The camera is thermally controlled to keep the
-working temperature on the focal plane within the range 13-17$^\circ$C
-giving a high gain accuracy. \textcolor{red}{(sarebbe meglio evitare di fare riferimento all'accuratezza richiesto da CTA [pag. 281 del paper di Actis 2011])}.\\
+
 
 The ASTRI camera electronics (\cite{Sottile2016}) represents an innovative solution, being based on a custom peak-detector operation mode to acquire the SiPM pulses rather than the sampling technique adopted by other cherenkov telescopes. The SiPM  read-out chip, with its signal shaper and peak detector customized for ASTRI, provides high efficiency auto-trigger capability and very fast camera pixel read out. The ASTRI camera trigger is a topological one, activated when a given number of contiguous pixels within a PDM presents a signal above a given photo-electron threshold. Data registered by the ASTRI camera at the occurrence of a trigger condition (scientific event) or when required (calibration or housekeeping data) are then sent to the camera server in which the camera data acquisition software is installed. 
