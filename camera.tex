@@ -31,3 +31,16 @@ The ASTRI SST-2M camera is also equipped  with a light-tight lid to prevents acc
 exposure of the focal surface detectors.
 The camera is thermally controlled to keep the working temperature on the focal plane within the range 13-17$^\circ$C
 for maintaing a goopd gain stability.
+
+
+ASTRI-Horn read out electronics is AC-coupled to the detector output, and any slow varying signal is  blocked.
+The camera is then blind to the diffuse night sky background (NSB) or to the light from stars in the FoV.   However, considering that sky photons actually arrive with a random Poissonian time distribution, the fluctuations generated in the electronic signal can be detected and they induce a noise. ASTRI-Horn  background is caracterised by signals distributed around an constant average value (pedestal) with fluctuations whose standard deviation is linearly dependent on the NSB flux. 
+The total standard deviation of the background in the camera is obtained by the following formula:
+
+\begin{equation}
+\sigma^2=\sigma^2_{dk}+\sigma^_{sky}
+\end{equation}
+
+\noindent
+where $\sigma_{dk}$ is the intrinsic standar deviation of the electronics plus the detector observed in complete dark condition as with the lid closed, and $\sigma_{sky}$ is the standard deviation induced by the  NSB  which is directly proportional to the photon flux.
+
