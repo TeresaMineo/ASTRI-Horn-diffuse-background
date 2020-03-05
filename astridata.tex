@@ -9,15 +9,16 @@ system and used for the on-field relative calibration of the gain.
 Its light uniformly illuminates the PDMs units at a controlled intensity.
 
 
-\subsection{Open sky data} (Alessio)
+\subsection{Open sky data} 
 \label{subs:skydata}
 
-%715+705 +788 499 + 972 + 1180+1157   
-%940 +944 +984 + 995+ 514
+Data used for the analysis refer to the period between December 2018 and March 2019 when the telescope was mainly involved in the Crab observation campaign. The list of the considered run ID is reported in Table~\ref{tab:obslog}; runs are split in several files, each containing a maximum of 50000 events, identified with a progressive number.
+A selection was applied in order to avoid data affected by technical problems as instability in the PDM signals or fluctuation of the trigger rate. Moreover, intervals with bad atmospheric conditions 
+(high humidity, low external temperature, cloudiness) were not considered as well as the periods when UVscope data are not available.
 
-%1001+ 981 +792+ 808+ 755+ 818 +592 +408+ 88
-%1730 + 1762+ 1804 +1814 1420
-%1329 +1496 +684 
+In each detected events we considered only the nine central PDM (11, 12, 13, 18, 19, 20, 25, 26, 27 in Fig.~\ref{fig: camera} ) taking into account the smaller UVscope FOV.  In addition, bad pixels and pixels imaging stars with a magnitude higher than …, coherently with the procedure adopted for UVscope data, are excluded from the analysis. The position of the stars in ASTRI-Horn FOV is computed from the correspondence with UVscope pixels derived from the variance method (Segreto et al 2019). 
+The variance method was not used to identify stars because the relative data were not available in December and, for uniformity in the analysis, we decide to not use it either in March.  However, March variance data were used to cross-check the positions obtained from the correspondence with UVscope pixels.
+
 
 \begin{table}[ht]
 \label{tab:astrilog}
@@ -65,6 +66,15 @@ Observation ID & Starting Date & Exposure      & Number of events & pointing \\
 \hline\hline
 \end{tabular}
 \end{table}
+
+Background pixels were identified applying the same double cut cleaning procedure used for the Cherenkov shower images. This procedure considers background pixels the ones that have a signal lower than a first threshold $S1$, or , if higher than $S1$, with none of the neighboring pixels with a signal higher that the second threshold $S2$. In our analysis, we adopted the values $S1$=6 and $S2$=12 used by Mineo et al. 2019 instead of higher values adopted for the analysis of Crab events (Lombarbi et al. 2018) to avoid muon signals.
+
+For each event we then accumulated the distribution of the number of $p.e.$ in the background pixels. The curve obtained for the file 1473 of the run ID 000 is plotted in Fig.~\ref{fig:distr} as example. It is a distribution with a Gaussian shape in the central part and with long wings due to residual signals in the positive part and to … ???? in the negative one. 
+
+The central part of the distribution is then fitted with a Gaussian whose $\sigma$ is the measure of the NSB fluctuations that, being a Poissonian signal, is linked to the absolute flux. The RMS values for December 9—10 observation night are plotted in Fig.~\ref{fig:rms} as function of time.
+
+Finally, we plot the resulting values of $\sigma$ for each observing night in Fig.\ref{fig:sigma}  as a function of time. 
+
 
 \subsection{Closed camera data} (Domenico)\\
 The first step of the analysis chain is the camera calibration. 
