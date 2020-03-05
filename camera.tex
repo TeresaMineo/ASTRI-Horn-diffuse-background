@@ -1,16 +1,24 @@
 \section{ASTRI-Horn telescope} 
 The ASTRI-Horn telescope is based on a dual mirror system in Schawrzschild-Couder configuration
-with a focal length of 2.15 m and a wide field of view (FoV) of 9.6$^\circ$. 
+with a focal length of 2.15 m and a nominal field of view (FoV) of 9.6$^\circ$. 
 The primary mirror, 4.3 m diameter, is segmented in 18 hexagonal panels, 
 while the secondary mirror, 2.2 m diameter, is a monolitic hemispherical thick glass shell. 
 Dedicated measurements  with an optical CCD camera showed that the
 point spread function (PSF) has a constant width of a few arcmin
-over the whole FoV and that  90\% of the PSF  is containerd in one camera pixel (ref). 
+over the whole FoV and that  90\% of the PSF  is containerd in one camera pixel (ref)
+whose angular size is 0.19$^\circ$. 
 
 The focal surface camera, has a convex-shaped structure where
 photon detection modules (PDMs), that are square flat modules, are symmetrically placed
-with angles respect to the telescope axis 
-opportunely chosen in order to follow the curvature of the focal plane.
+with angles respect to the telescope axis opportunely chosen in order to follow the curvature of the focal plane.
+Currently, the camera includes 21 out of 37 PDMs, for a total effective FoV of 7.6$^\circ$.
+A skeme of the disposition of the PDM is presented in Fig.~\ref{fig:camera}, where numbers identifying each PDM are also indicated. 
+\begin{figure}
+\includegraphics
+\caption{Skeme of the disposition of the PDMs on the focal surface. Numbers identify the PDM, the FoV common to UvScope is indicated with the dashed lines and with the yellow color of the PDMs.}
+\label{fig:camera}
+\end{figure}
+
 Each PDM, composed of 8$\times$8 side-by-side Silicon photomultipliers (SiPMs), 
 is installed on a printed circuit board that hosts the front-end electronics (FEE) composed by
  two application specific integrated circuits (ASIC) for the SiPM signal read out.
