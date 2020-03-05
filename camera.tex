@@ -1,18 +1,34 @@
-\section{ASTRI-Horn telescope} (Domenico)\\
-The Focal Surface Camera (FSC), has a 
-convex-shaped structure with a curvature radius of 1060 mm.
-Photon Detection Modules (PDMs), that are square flat modules, are symmetrically placed
-on the FSC with angles respect to the telescope axis 
+\section{ASTRI-Horn telescope} 
+The ASTRI-Horn telescope is based on a dual mirror system in Schawrzschild-Couder configuration
+with a wide field of view (FoV) of 9.6$^\circ$ and a focal length of 2.15 m. 
+The primary mirror, 4.3 m diameter, is segmented in 18 hexagonal panels, 
+while the secondary mirror, 2.2 m diameter, is a monolitic hemispherical thick glass shell. 
+Dedicated measurements  with an optical CCD camera showed that the
+point spread function (PSF) has a constant width of a few arcmin
+over the whole FoV and that  90\% of the PSF  is containerd in one camera pixel. 
+
+The focal surface camera, has a convex-shaped structure where
+photon detection modules (PDMs), that are square flat modules, are symmetrically placed
+with angles respect to the telescope axis 
 opportunely chosen in order to follow the curvature of the focal plane.
-Each PDM, composed of 8$\times$8 side-by-side Silicon Photomultipliers (SiPMs), 
-is installed on a Printed Circuit Board (PCB) 
-of the same dimension.
-The PCB hosts the Front-End Electronics (FEE) composed of
- two Application Specific Integrated Circuits (ASIC) for the SiPM signal read out,
+Each PDM, composed of 8$\times$8 side-by-side Silicon photomultipliers (SiPMs), 
+is installed on a printed circuit board (PCB)  of the same dimension.
+The PCB hosts the front-end electronics (FEE) composed by
+ two application specific integrated circuits (ASIC) for the SiPM signal read out,
 four Analogue-to-Digital Converters (ADC) and one Field Programmable
 Gate Array (FPGA). This FEE-FPGA manages the ASICs slow control,
-the generation of local trigger and the data analog-to-digital conversion(see Sect.3 (\cite{Sottile2016}).
-The Back-End Electronics (BEE) is composed of two main parts that are
+the generation of local trigger and the data analog-to-digital conversion \cite{Sottile2016}.
+ Images of the Polaris Star at different off-axis angles (up to 4.5◦
+) have been taken with an optical
+CCD camera able to scan the whole FoV, demonstrating that the
+point spread function (PSF) has a constant width of a few arcmin
+over the whole FoV.
+Since the SC optical design typically results in a small
+plate scale (37.5 mm/
+◦
+in the case of ASTRI), the camera at
+the focal plane is characterized by compact dimensions over a
+large FoV. F Back-End Electronics (BEE) is composed of two main parts that are
 a Processing System (PS) and a Programmable Logic (PL). 
 It is the main elaboration unit of the camera which
 controls and manages the overall system, including data, and
