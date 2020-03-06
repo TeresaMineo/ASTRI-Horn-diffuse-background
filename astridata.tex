@@ -5,13 +5,17 @@
 \label{subs:gain}
 
 A first step of the data analysis chain is the gain calibration of the camera pixels.
-ASTRI-Horn camera is equipped with a thermal control system to keep the temperature of the focal plane in the  range required (13-17$^\circ$) to limit the gain variations to a few ADCs. In addition, a dedicated procedure is forseen to evaluate off-line the gain relative to each observation with an accuracy of ...{\tem mettere il valore} ADC. ASTRI-Horn is, in fact, equipped with a side emitting fiber optics system (FOC) located along the PMMA window circumference and connected to a controlled intensity light emitting diode (LED). FOC data are collected periodically during the normal telescope acquisition mode.
-The light produced by the FOC is uniform and its intensity provide on average a few $p.e.$ per pixel. 
+ASTRI-Horn camera is equipped with a thermal control system to keep the temperature of the focal plane in the  range required (13-17$^\circ$) to limit the gain variations to a few ADCs. In addition, a dedicated procedure is forseen to evaluate off-line the gain relative to each observation with an accuracy of ...{\tem mettere il valore} ADC. ASTRI-Horn is, in fact, equipped with a side emitting fiber optics system (FOC) located along the PMMA window circumference and connected to a controlled intensity diode (LED). The light produced is uniform and its intensity provide on average a few $p.e.$ per pixel. FOC data are collected periodically during the normal telescope acquisition mode.
 
-FOC data used for this paper data analyis are listed in Table~\ref{tab:FOC}; they are relative to a fixed voltage $V_{0}$= 57 V {\tem di che?} and a temperature of 15$^\circ$C {\che vuol dire?}. For these acquisitions HG data are available. Figure~\ref{fig:FOC} shows the HG pulse height spectrum acquired in the FOC run \tem{quale?}. 
+FOC data used for this paper data analyis are listed in Table~\ref{tab:FOC}; they are relative to a fixed voltage $V_{0}$= 57 V {\tem di che?} and a temperature of 15$^\circ$C {\che vuol dire?}. For these acquisitions HG data are available.
 
-The distribution shown is the reconstructed maximum amplitude for all the recorded waveforms of a physical pixel. While the first peak is the pedestal, the following  ones are the single and multiple p.e. contributions. The distance between 
-the peaks allow to extract the conversion factor.\\
+The pulse hight distribution for each considered run is accumulated and the  maximum amplitude 
+for all the recorded waveforms of a physical pixel. While the first peak is the pedestal, the following  ones are the single and multiple p.e. contributions. The distance between 
+the peaks allow to extract the conversion factor.
+
+Figure~\ref{fig:FOC} shows the HG pulse height spectrum acquired in the FOC run \tem{quale?}. 
+
+
 \begin{figure*}[ht!!]
 \centering
 \includegraphics[angle=0, width=12.5cm]{PIXEL60_PDM20_HG_DICEMBRE_2018.eps}
@@ -25,19 +29,15 @@ multiple peaks Gaussian fit.}
 
 \begin{table*}[htbp!!]
 \centering
-\caption{ASTRI-Horn FOC/Dark runs}
-\label{table2}
+\caption{Log of FOC data used in the analysis. For these runs HG data are considered. }
+\label{tab:FOC}
 \begin{tabular}{lccc}
 \hline\hline
-Run ID & Starting Date & Run type      & Number of events \\
-               & (year/month/day h:m:s)   \\
+Obs. ID & Starting Date &  Expopsure & Number of events \\
+               & (year/month/day h:m:s) & (s)   \\
 \hline     
-1380 & 2018/12/01 20:59:18  &   Dark    & 15305      \\
-1394 & 2018/12/02 20:01:09  &   FOC     & 60065     \\
-1616 & 2019/02/28 12:37:02  &   Dark    & 50000     \\
-1763 & 2019/03/23 20:01:21  &   FOC     & 120123    \\
-  
-
+1394 & 2018/12/02 20:01:09  &  & 60065     \\
+1763 & 2019/03/23 20:01:21  &  & 120123    \\ 
 \hline\hline
 \end{tabular}
 \end{table*}
@@ -45,7 +45,7 @@ Run ID & Starting Date & Run type      & Number of events \\
 \subsection{Open sky data} 
 \label{subs:skydata}
 
-Data used for the analysis refer to the period between December 2018 and March 2019 when the telescope was mainly involved in the Crab observation campaign. The list of the considered run ID is reported in Table~\ref{tab:obslog}; runs are split in several files, each containing a maximum of 50000 events, identified with a progressive number.
+Background data used for the analysis refer to the period between December 2018 and March 2019 when the telescope was mainly involved in the Crab observation campaign. The list of the considered run ID is reported in Table~\ref{tab:obslog}; runs are split in several files, each containing a maximum of 50000 events, identified with a progressive number.
 A selection was applied in order to avoid data affected by technical problems as instability in the PDM signals or fluctuation of the trigger rate. Moreover, intervals with bad atmospheric conditions 
 (high humidity, low external temperature, cloudiness) were not considered as well as the periods when UVscope data are not available.
 
