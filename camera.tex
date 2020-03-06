@@ -24,17 +24,12 @@ A skeme of the disposition of the PDM is presented in Fig.~\ref{fig:camera}, whe
 \end{figure}
 
 Each PDM, composed of 8$\times$8 side-by-side Silicon photomultipliers (SiPMs), 
-is installed on a printed circuit board that hosts the front-end electronics (FEE) composed by
- two application specific integrated circuits (ASIC) for the SiPM signal read out.
- The ASTRI camera FEE electronics \cite{Sottile2016} represents an innovative solution, being based on a custom peak-detector operation mode to acquire the SiPM pulses rather than the sampling technique usually adopted by other Cherenkov telescopes.
+is installed on a printed circuit board that hosts the front-end electronics (FEE) composed by two application specific integrated circuits (ASIC) for the SiPM signal read out.
+The ASTRI camera FEE electronics \cite{Sottile2016} represents an innovative solution, being based on a custom peak-detector operation mode to acquire the SiPM pulses rather than the sampling technique usually adopted by other Cherenkov telescopes.
 This FEE-FPGA manages the the generation of local trigger, a topological one, activated when a given number of contiguous pixels within a PDM presents a signal above a given photo-electron threshold \cite{Sottile2016}.
-The back-end electronics (BEE) is the main elaboration unit of the camera which
-controls and manages the overall system, including data, and
-all ancillaries used to perform operations as
+The back-end electronics (BEE) is the main elaboration unit of the camera which controls and manages the overall system, including data, and all ancillaries used to perform operations as
 the camera thermal regulation, the voltage distribution management and the time events stamping.
-The BEE also provides the functions necessary to process and transmit the event data as 
-obtained by the FEE to an external data acquisition 
-workstation responsible for receiving and storing the data packets \cite{Sottile2016}.
+The BEE also provides the functions necessary to process and transmit the event data as obtained by the FEE to an external data acquisition workstation responsible for receiving and storing the data packets \cite{Sottile2016}.
 In order to protect the camera sensors from the external
 atmospheric environment, an optical-UV transparent poly methyl methacrylate (PMMA)  window 
 is mounted onto the focal surface support structure covering all the PDMs.
@@ -42,7 +37,7 @@ This window is modeled with the same radius of curvature of the focal surface \c
 The ASTRI SST-2M camera is also equipped  with a light-tight lid to prevents accidental sunlight 
 exposure of the focal surface detectors.
 The camera is thermally controlled to keep the working temperature on the focal plane within the range 13-17$^\circ$C
-for maintaing a goopd gain stability.
+for maintaing a good gain stability, considering that the gain variation with the tempertaure are of the order of 1 ADC per C$^\circ$ \cite{Imnpiombato2012}.
 
 
 ASTRI-Horn read out electronics is AC-coupled to the detector output, and any slow varying signal is  blocked.
