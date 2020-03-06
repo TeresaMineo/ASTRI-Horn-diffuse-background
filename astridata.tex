@@ -5,12 +5,12 @@
 \label{subs:gain}
 
 A first step of the data analysis chain is the gain calibration of the camera pixels.
-ASTRI-Horn camera is equipped with a thermal control system to keep the temperature of the focal plane in the  range required (13-17$^\circ$) to limit the gain variations to a few ADCs. In addition, a dedicated procedure is forseen to evaluate off-line the gain relative to each observation with an accuracy of ... ADC. ASTRI-Horn is, in fact, equipped with a side emitting fiber optics system (FOC) located along the PMMA window circumference. It is illuminated by a light emitting diode (LED) and its light uniformly illuminates the focal plane units at a controlled intensity. FOC data are collected periodically during the normal telescope acquisition mode.
-The light produced by the FOC is uniform and its intensity provide an average of few $p.e.$ per pixel. 
-Data used for the gain evaluation in the oservation runs used for the analyis are listed in Table~\ref{tab:FOC}, they are relative to a fixed voltage $V_{0}$= 57 V \tem{di che?} and a temperature of 15$^\circ$C for a camera pixel. For these acquisition HG data are available. Figure~\ref{fig:FOC} shows the HG pulse height spectrum acquired in the FOC run \tem{quale?}  . 
-The distribution shown is the reconstructed maximum amplitude for all the 
-recorded waveforms of a physical pixel. While the first peak is the pedestal, the following 
-ones are the single and multiple p.e. contributions. The distance between 
+ASTRI-Horn camera is equipped with a thermal control system to keep the temperature of the focal plane in the  range required (13-17$^\circ$) to limit the gain variations to a few ADCs. In addition, a dedicated procedure is forseen to evaluate off-line the gain relative to each observation with an accuracy of ...{\tem mettere il valore} ADC. ASTRI-Horn is, in fact, equipped with a side emitting fiber optics system (FOC) located along the PMMA window circumference and connected to a controlled intensity light emitting diode (LED). FOC data are collected periodically during the normal telescope acquisition mode.
+The light produced by the FOC is uniform and its intensity provide on average a few $p.e.$ per pixel. 
+
+FOC data used for this paper data analyis are listed in Table~\ref{tab:FOC}; they are relative to a fixed voltage $V_{0}$= 57 V {\tem di che?} and a temperature of 15$^\circ$C {\che vuol dire?}. For these acquisitions HG data are available. Figure~\ref{fig:FOC} shows the HG pulse height spectrum acquired in the FOC run \tem{quale?}. 
+
+The distribution shown is the reconstructed maximum amplitude for all the recorded waveforms of a physical pixel. While the first peak is the pedestal, the following  ones are the single and multiple p.e. contributions. The distance between 
 the peaks allow to extract the conversion factor.\\
 \begin{figure*}[ht!!]
 \centering
@@ -22,36 +22,6 @@ The black curve represents the distribution of the peak detector output and the 
 multiple peaks Gaussian fit.}
 \label{fig:FOC}
 \end{figure*}
-
-\textbf{\textit{Dark counts runs}} are acquired
-when the lids of the camera are closed.
-The light-tight lid, in addition to protecting the FSC, it ensures that no light
-can enter it when the lid is latched shut. In this way, it is possible to read out
-the pulse height of all the signals pixel for each triggered dark event.
-In absence of light, using the Low Gain electronics chain, the majority of events are 
-contained in one peak position, named pedestal. 
-It, that does not vary with temperature(\cite{Impiombato2016}), is considered as offset electronics chain in the analysis of cherenkov images for the astronomical
-observations.
-Each pulse height spectrum of the camera pixels, is fitted with a Gaussian function, allowing to obtain the exact peak position value in the ADC counts with the relative width (see Fig.~\ref{fig2}).
-
-
-
-
-
-\begin{figure*}[h!!]
-\centering
-\includegraphics[angle=0, width=12cm]{PIXEL60_PDM20_LG_DICEMBRE_2018.eps}
-\vspace{0.5cm}
-\caption{ Single photo-electron peak spectrum for a camera pixel taken in peak detector mode in one of the Dark run listed in 
-Table~\ref{table2}. The black curve represents the distribution of the peak detector
-output and the red curve shows the corresponding Gaussian fit.}
-\label{fig2}
-\end{figure*}
-\label{subs:skydata}
-
-
-
-
 
 \begin{table*}[htbp!!]
 \centering
@@ -139,72 +109,16 @@ The central part of the distribution is then fitted with a Gaussian whose $\sigm
 Finally, we plot the resulting values of $\sigma$ for each observing night in Fig.\ref{fig:sigma}  as a function of time. 
 
 
-\subsection{Closed camera data} (Domenico)\\
-The first step of the analysis chain is the camera calibration. 
-It concerns the relative calibration 
-of the pixels in the camera, i.e. the signal extraction and conversion into 
-physical units, and the estimation of the level of statistical 
-fluctuations of the pixel signals.
-For the ASTRI-Horn, the signal waveforms are acquired with a 
-sampling in peak detector mode, in order to obtain a pulse height distributions (PHD) for 
-each physical pixel.
-However the calibrated data must be expressed in term of 
-photo-electrons(p.e.). Therefore the conversion factors from the maximum 
-amplitude of the pulse to p.e. and from the integral of the pulse to p.e. 
-must be known. 
-The method to extract the conversion factor, also called gain, is to calculate the equivalent 
-signal (maximum amplitude in ADC) for a single photon.
-To do so, the ASTRI-Horn plans to have two types of low light level runs:\\
-\textbf{\textit{FOC runs}} are acquired during the physics data taking.
-In order to avoid that these events overlap with physics event, the light is flashed 
-at a lower rate than the expected physics trigger rate. The light 
-produced by the FOC must be uniform and should have an average of 
-few p.e. per pixel. This allows to monitor continuously the gain of the 
-electronics chain. Figure~\ref{fig1} shows the pulse height spectrum acquired in one of the FOC run listed in Table~\ref{table2} with a fixed voltage $V_{0}$= 57 V 
-and a temperature of 15$^\circ$C for a camera pixel in the High Gain electronics chain. 
-The distribution shown is the reconstructed maximum amplitude for all the 
-recorded waveforms of a physical pixel. While the first peak is the pedestal, the following 
-ones are the single and multiple p.e. contributions. The distance between 
-the peaks allow to extract the conversion factor.\\
-\begin{figure*}[ht!!]
-\centering
-\includegraphics[angle=0, width=12.5cm]{PIXEL60_PDM20_HG_DICEMBRE_2018.eps}
-\vspace{0.5cm}
-\caption{ Pulse height spectrum at a fixed temperature of 15$^\circ$C
-and $V_{0}$=57 V for a camera pixel, during a FOC run in the HG electronics chain. 
-The black curve represents the distribution of the peak detector output and the red curve shows the corresponding
-multiple peaks Gaussian fit.}
-\label{fig1}
-\end{figure*}
+\subsection{Closed camera data} 
 
-\textbf{\textit{Dark counts runs}} are acquired
-when the lids of the camera are closed.
-The light-tight lid, in addition to protecting the FSC, it ensures that no light
-can enter it when the lid is latched shut. In this way, it is possible to read out
-the pulse height of all the signals pixel for each triggered dark event.
-In absence of light, using the Low Gain electronics chain, the majority of events are 
-contained in one peak position, named pedestal. 
-It, that does not vary with temperature(\cite{Impiombato2016}), is considered as offset electronics chain in the analysis of cherenkov images for the astronomical
-observations.
+
+
+
+Dark counts runs are acquired when the lids of the camera are closed.
+The light-tight lid, in addition to protecting the FSC, it ensures that no light can enter it when the lid is latched shut. In this way, it is possible to read out the pulse height of all the signals pixel for each triggered dark event.
+In absence of light, using the Low Gain electronics chain, the majority of events are  contained in one peak position, named pedestal. 
+It, that does not vary with temperature(\cite{Impiombato2016}), is considered as offset electronics chain in the analysis of cherenkov images for the astronomical observations.
 Each pulse height spectrum of the camera pixels, is fitted with a Gaussian function, allowing to obtain the exact peak position value in the ADC counts with the relative width (see Fig.~\ref{fig2}).
-
-
-
-
-
-\begin{figure*}[h!!]
-\centering
-\includegraphics[angle=0, width=12cm]{PIXEL60_PDM20_LG_DICEMBRE_2018.eps}
-\vspace{0.5cm}
-\caption{ Single photo-electron peak spectrum for a camera pixel taken in peak detector mode in one of the Dark run listed in 
-Table~\ref{table2}. The black curve represents the distribution of the peak detector
-output and the red curve shows the corresponding Gaussian fit.}
-\label{fig2}
-\end{figure*}
-\label{subs:skydata}
-
-
-
 
 
 \begin{table*}[htbp!!]
