@@ -3,11 +3,93 @@
 
 \subsection{Gain evaluation}
 \label{subs:gain}
-A side emitting Fiber Optics system(FOC) is located  along the PMMA 
-circumference. It is illuminated by a Light Emitting Diode (LED) 
-system and used for the on-field relative calibration of the gain. 
-Its light uniformly illuminates the PDMs units at a controlled intensity.
 
+A first step of the data analysis chain is the gain calibration of the camera pixels.
+ASTRI-Horn camera is equipped with a thermal control to keep  the temperature of the focal plane in the required range to limit any gain variations to ... %, 
+It concerns the relative calibration 
+of the pixels in the camera, i.e. the signal extraction and conversion into 
+physical units, and the estimation of the level of statistical 
+fluctuations of the pixel signals.
+For the ASTRI-Horn, the signal waveforms are acquired with a 
+sampling in peak detector mode, in order to obtain a pulse height distributions (PHD) for 
+each physical pixel.
+However the calibrated data must be expressed in term of 
+photo-electrons(p.e.). Therefore the conversion factors from the maximum 
+amplitude of the pulse to p.e. and from the integral of the pulse to p.e. 
+must be known. 
+The method to extract the conversion factor, also called gain, is to calculate the equivalent 
+signal (maximum amplitude in ADC) for a single photon.
+To do so, the ASTRI-Horn plans to have two types of low light level runs:\\
+\textbf{\textit{FOC runs}} are acquired during the physics data taking.
+In order to avoid that these events overlap with physics event, the light is flashed 
+at a lower rate than the expected physics trigger rate. The light 
+produced by the FOC must be uniform and should have an average of 
+few p.e. per pixel. This allows to monitor continuously the gain of the 
+electronics chain. Figure~\ref{fig1} shows the pulse height spectrum acquired in one of the FOC run listed in Table~\ref{table2} with a fixed voltage $V_{0}$= 57 V 
+and a temperature of 15$^\circ$C for a camera pixel in the High Gain electronics chain. 
+The distribution shown is the reconstructed maximum amplitude for all the 
+recorded waveforms of a physical pixel. While the first peak is the pedestal, the following 
+ones are the single and multiple p.e. contributions. The distance between 
+the peaks allow to extract the conversion factor.\\
+\begin{figure*}[ht!!]
+\centering
+\includegraphics[angle=0, width=12.5cm]{PIXEL60_PDM20_HG_DICEMBRE_2018.eps}
+\vspace{0.5cm}
+\caption{ Pulse height spectrum at a fixed temperature of 15$^\circ$C
+and $V_{0}$=57 V for a camera pixel, during a FOC run in the HG electronics chain. 
+The black curve represents the distribution of the peak detector output and the red curve shows the corresponding
+multiple peaks Gaussian fit.}
+\label{fig1}
+\end{figure*}
+
+\textbf{\textit{Dark counts runs}} are acquired
+when the lids of the camera are closed.
+The light-tight lid, in addition to protecting the FSC, it ensures that no light
+can enter it when the lid is latched shut. In this way, it is possible to read out
+the pulse height of all the signals pixel for each triggered dark event.
+In absence of light, using the Low Gain electronics chain, the majority of events are 
+contained in one peak position, named pedestal. 
+It, that does not vary with temperature(\cite{Impiombato2016}), is considered as offset electronics chain in the analysis of cherenkov images for the astronomical
+observations.
+Each pulse height spectrum of the camera pixels, is fitted with a Gaussian function, allowing to obtain the exact peak position value in the ADC counts with the relative width (see Fig.~\ref{fig2}).
+
+
+
+
+
+\begin{figure*}[h!!]
+\centering
+\includegraphics[angle=0, width=12cm]{PIXEL60_PDM20_LG_DICEMBRE_2018.eps}
+\vspace{0.5cm}
+\caption{ Single photo-electron peak spectrum for a camera pixel taken in peak detector mode in one of the Dark run listed in 
+Table~\ref{table2}. The black curve represents the distribution of the peak detector
+output and the red curve shows the corresponding Gaussian fit.}
+\label{fig2}
+\end{figure*}
+\label{subs:skydata}
+
+
+
+
+
+\begin{table*}[htbp!!]
+\centering
+\caption{ASTRI-Horn FOC/Dark runs}
+\label{table2}
+\begin{tabular}{lccc}
+\hline\hline
+Run ID & Starting Date & Run type      & Number of events \\
+               & (year/month/day h:m:s)   \\
+\hline     
+1380 & 2018/12/01 20:59:18  &   Dark    & 15305      \\
+1394 & 2018/12/02 20:01:09  &   FOC     & 60065     \\
+1616 & 2019/02/28 12:37:02  &   Dark    & 50000     \\
+1763 & 2019/03/23 20:01:21  &   FOC     & 120123    \\
+  
+
+\hline\hline
+\end{tabular}
+\end{table*}
 
 \subsection{Open sky data} 
 \label{subs:skydata}
