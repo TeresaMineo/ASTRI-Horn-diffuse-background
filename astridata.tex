@@ -9,7 +9,7 @@ The ASTRI-Horn camera is equipped with a thermal control system to keep the temp
 
 FOC data used for this paper data analyis are listed in Table~\ref{tab:FOC}; they are relative to a fixed voltage $V_{0}$= 57 V {\tem di che?} and a temperature of 15$^\circ$C {\che vuol dire?}. For these acquisitions HG data are available.
 
-The HG pulse hight distribution for each run listed in Table~\ref{tab:FOC} is accumulated and, for each pixel, the position of the maximum amplitude of each peak is computed. Figure~\ref{fig:FOC} shows the pulse height spectrum relative to pixel ... in the FOC run ...\tem{quale?}. The gain is computed comparing the average difference between two consecutive peaks centers, $p.e._{eq}$, with that produced by a reference gain $p.e._{ref}$:
+The HG pulse hight distribution for both runs listed in Table~\ref{tab:FOC} is accumulated and, for each pixel, the position of the maximum amplitude of each peak is computed fitting the curve with a multi-Gaussian function. Figure~\ref{fig:FOC} shows the pulse height spectrum relative to one of the camera pixel. The gain is computed comparing the average difference between two consecutive peaks centers, $p.e._{eq}$, with that produced by a reference gain $p.e._{ref}$:
 
 \begin{equation}
 Gain_{run ID}\,=\,\frac{p.e._{eq}}{p.e._{ref}}\,Gain_{ref}
@@ -18,19 +18,11 @@ Gain_{run ID}\,=\,\frac{p.e._{eq}}{p.e._{ref}}\,Gain_{ref}
 \noindent
 where $Gain_{run ID}$ is the gain in the considered run, and $Gain_{ref}$ is the reference one.
 
-
-
- 
-
-
 \begin{figure*}[ht!!]
 \centering
 \includegraphics[angle=0, width=12.5cm]{figure/PIXEL60_PDM20_HG_DICEMBRE_2018.eps}
 \vspace{0.5cm}
-\caption{ Pulse height spectrum at a fixed temperature of 15$^\circ$C
-and $V_{0}$=57 V for a camera pixel, during a FOC run in the HG electronics chain. 
-The black curve represents the distribution of the peak detector output and the red curve shows the corresponding
-multiple peaks Gaussian fit.}
+\caption{ Pulse height spectrum for one of the camera pixel during a FOC acquisition (black curve); data are relative to the HG electronics chain. The red curve shows the multiple peaks Gaussian fit.}
 \label{fig:FOC}
 \end{figure*}
 
@@ -115,25 +107,32 @@ Finally, we plot the resulting values of $\sigma$ for each observing night in Fi
 
 \subsection{Closed camera data} 
 
-As explained in Sect.~\ref{sect:intro}, the $\sigma$ of the background distribution is obtained by the sum of the intrinsic noise plus the fluctuations due to the NSB flux level. 
-Dark counts runs are acquired when the lids of the camera are closed.
-The light-tight lid, in addition to protecting the FSC, it ensures that no light can enter it when the lid is latched shut. In this way, it is possible to read out the pulse height of all the signals pixel for each triggered dark event.
-In absence of light, using the Low Gain electronics chain, the majority of events are  contained in one peak position, named pedestal. 
-It, that does not vary with temperature(\cite{Impiombato2016}), is considered as offset electronics chain in the analysis of cherenkov images for the astronomical observations.
-Each pulse height spectrum of the camera pixels, is fitted with a Gaussian function, allowing to obtain the exact peak position value in the ADC counts with the relative width (see Fig.~\ref{fig2}).
+As explained in Sect.~\ref{sect:intro}, the $\sigma$ of the background distribution is obtained by the sum of the intrinsic noise plus the fluctuations due to the NSB flux level. The first component can be obtained by events acquired with the camera lids closed in absence of light.
+Observations used for this analysis are listed in Table~\ref{tab:dark}. In this case, data from LG electronics chain are considered and pulse height spectra for each camera pixels are accumulated adding the contributiond of the two considered observations. These are mainly composed by a single peak, the pedestal, that is fitted with a Gaussian function whose $\sigma$ is the measurement of $\sigma_{dark}$. As example the distribution relative to one of the camera pixel in the run ID 1616 is plotted in Fig.~\ref{fig:dark}).
+
+
+\begin{figure*}[h!!]
+\centering
+\includegraphics[angle=0, width=12cm]{figure/PIXEL60_PDM20_LG_DICEMBRE_2018.eps}
+\vspace{0.5cm}
+\caption{ Pulsed height distribution in one of the camera pixel relative to the runs listed in
+Table~\ref{table2} (black curve), the the relative fit with a Gaussian (red curve).}
+\label{fig:dark}
+\end{figure*}
+\label{subs:skydata}
 
 
 \begin{table*}[htbp!!]
 \centering
-\caption{ASTRI-Horn FOC/Dark runs}
-\label{table2}
+\caption{Log of closed lid observations. For these runs, LG data are considered.}
+\label{tab:dark}
 \begin{tabular}{lccc}
 \hline\hline
-Run ID & Starting Date & Run type      & Number of events \\
+Run ID & Starting Date & Exposure     & Number of events \\
                & (year/month/day h:m:s)   \\
 \hline     
-1380 & 2018/12/01 20:59:18  &   Dark    & 15305      \\
-1616 & 2019/02/28 12:37:02  &   Dark    & 50000     \\
+1380 & 2018/12/01 20:59:18  &       & 15305      \\
+1616 & 2019/02/28 12:37:02  &      & 50000     \\
 \hline\hline
 \end{tabular}
 \end{table*}
