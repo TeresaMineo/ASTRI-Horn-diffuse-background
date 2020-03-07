@@ -16,6 +16,8 @@ Data used for the analysis refer to the period between December 2018 and March 2
 A selection was applied in order to avoid data affected by technical problems as instability in the PDM signals or fluctuation of the trigger rate. Moreover, intervals with bad atmospheric conditions 
 (high humidity, low external temperature, cloudiness) were not considered as well as the periods when UVscope data are not available.
 
+\textit{\textcolor{blue}{\hl{Cettina: attenzione: controllare se abbiamo gia' descritto UVscope in modo consistente, sia per la frase di sopra sia per quanto segue ... }}}
+
 In each detected events we considered only the nine central PDM (11, 12, 13, 18, 19, 20, 25, 26, 27 in Fig.~\ref{fig: camera} ) taking into account the smaller UVscope FOV.  In addition, bad pixels and pixels imaging stars with a magnitude higher than …, coherently with the procedure adopted for UVscope data, are excluded from the analysis. The position of the stars in ASTRI-Horn FOV is computed from the correspondence with UVscope pixels derived from the variance method (Segreto et al 2019). 
 The variance method was not used to identify stars because the relative data were not available in December and, for uniformity in the analysis, we decide to not use it either in March.  However, March variance data were used to cross-check the positions obtained from the correspondence with UVscope pixels.
 
@@ -30,13 +32,13 @@ Observation ID & Starting Date & Exposure      & Number of events & pointing \\
                & (year/month/day h:m:s) & (s)  \\
 \hline     
 %https://www.overleaf.com/project/5e3005eb54e0d8000155a7ff
-
+\footnote{ Azi$=180°$ EleV. $=70°$}
 1429 & 2018/12/05 20:57:37  &   2094     & 31755 & Crab Off    \\
-1430 & 2018/12/05 21:54:40  &   909      & 29808 & Fixed AltAzi Azi$=180°$ EleV. $=70°$    \\
-1453 & 2018/12/07 20:06:11  &   6016     & 348442 & Crab Off    \\
-1453 & 2018/12/07 20:06:11  &   6016     & 348442 & Crab Off    \\
-1453 & 2018/12/07 20:06:11  &   6016     & 348442 & Crab Off    \\
-1453 & 2018/12/07 20:06:11  &   6016     & 348442 & Crab Off    \\
+1430 & 2018/12/05 21:54:40  &   909      & 29808 & Fixed AltAzi*    \\
+1431 & 2018/12/05 22:22:29  &   3573     & 133190 & Crab     \\ %133188
+1432 & 2018/12/05 23:30:12  &   3790     & 450000 & Crab     \\ %449998
+1433 & 2018/12/06 01:27:41  &   7638     & 198341 & Crab Off    \\ %198303
+1434 & 2018/12/06 03:36:06  &   4499     & 142610 &  Fixed AltAzi* %142583   \\
 
 
 
@@ -50,6 +52,21 @@ Observation ID & Starting Date & Exposure      & Number of events & pointing \\
 1466 & 2018/12/09 00:07:25 &  3161 & 251442 & Crab \\ %251418  
 1467 & 2018/12/08 01:09:44 &  8959 & 243713 & Crab Off \\ %243399
 1468 & 2018/12/08 03:40:11 &  1237 & 33168 &  Fixed AltAzi\\ %33126
+
+
+
+1472 & 2018/12/09 19:55:03 &  4958 & 185142 &  Crab Off \\ % 185120
+1473 & 2018/12/09 21:28:40 &  5549 & 266294 &  Crab\\ %266283
+1474 & 2018/12/09 23:19:17 &  3508 & 239982 &  Crab \\ %239954
+1475 & 2018/12/10 00:43:51 &  396 & 50989 &  Crab Off \\ %50984
+1486 & 2018/12/11 23:02:02 &  1627 & 33168 &  Crab\\ %33126
+1487 & 2018/12/11 23:31:48 &  4800 & 33168 &  Crab\\ %33126
+1488 & 2018/12/12 01:01:45 &  4638+ & 33168 &  Crab Off\\ %33126
+1489 & 2018/12/12 03:02:43 &  1744 & 33168 &  Crab Off \\ %33126
+1490 & 2018/12/12 03:34:02 &  5705 & 33168 &  Fixed AltAzi*\\ %33126
+
+
+
 1658 & 2019/03/05 18:13:58 &  112 & 1435 & Merak \\  
 1659 & 2019/03/05 18:19:26 &  154 & 3149 & Zeta Tauri \\  
 1660 & 2019/03/05 18:24:37 &  6224  & 419636 & Crab \\ %419631  
