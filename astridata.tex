@@ -5,18 +5,18 @@
 \label{subs:gain}
 
 A first step of the data analysis chain is the calibration of the camera pixel gains. 
-The ASTRI-Horn camera is equipped with a thermal control system to keep the temperature of the focal plane in a defined reange and to monitor it in order to coherently change the voltage applied to the FEE preamplifiers (???) and compensate any following  gain variations. In addition, a dedicated procedure is implemented to improve the level of the gain calibration up to 1\% with an off-line analysis. This method is based on the use of a side emitting fiber optics system (FOC) located along the PMMA window circumference and connected to a controlled intensity diode (LED. It lights almost uniformly the focal plane with an average intensity of a few $p.e.$ per pixel. FOC data are collected periodically during the normal telescope acquisition mode (???).
+The ASTRI-Horn camera is equipped with a thermal control system to keep the temperature of the focal plane in a defined range and to monitor it in order to coherently change the voltage applied to the FEE preamplifiers (???) and compensate any following  gain variations. In addition, a dedicated procedure is implemented to improve the level of the gain calibration up to 1\% with an off-line analysis. This method is based on the use of a side emitting fiber optics system (FOC) located along the PMMA window circumference and connected to a controlled intensity diode (LED. It lights almost uniformly the focal plane with an average intensity of a few $p.e.$ per pixel. FOC data are collected periodically during the normal telescope acquisition mode (???).
 
-FOC data used for this paper data analyis are listed in Table~\ref{tab:FOC}; they are relative to a fixed voltage $V_{0}$= 57 V {\tem di che?} and a temperature of 15$^\circ$C {\che vuol dire?}. For these acquisitions HG data are available.
+FOC data used for this paper data analysis are listed in Table~\ref{tab:FOC}; they are relative to a fixed voltage $V_{0}$= 57 V {\tem di che?} and a temperature of 15$^\circ$C {\che vuol dire?}. For these acquisitions HG data are available.
 
-The HG pulse hight distribution for both runs listed in Table~\ref{tab:FOC} is accumulated and, for each pixel, the position of the maximum amplitude of each peak is computed fitting the curve with a multi-Gaussian function. Figure~\ref{fig:FOC} shows the pulse height spectrum relative to one of the camera pixel. The gain is computed comparing the average difference between two consecutive peaks centers, $p.e._{eq}$, with that produced by a reference gain $p.e._{ref}$:
+The HG pulse height distribution for both runs listed in Table~\ref{tab:FOC} is accumulated and, for each pixel, the position of the maximum amplitude of each peak is computed fitting the curve with a multi-Gaussian function. Figure~\ref{fig:FOC} shows the pulse height spectrum relative to one of the camera pixel. The gain is computed comparing the average difference between two consecutive peaks centers, $p.e._{eq}$, with that produced by a reference gain $p.e._{ref}$:
 
 \begin{equation}
-Gain_{run ID}\,=\,\frac{p.e._{eq}}{p.e._{ref}}\,Gain_{ref}
+G_{run ID}\,=\,\frac{p.e._{eq}}{p.e._{ref}}\,G_{ref}
 \end{equation}
 
 \noindent
-where $Gain_{run ID}$ is the gain in the considered run, and $Gain_{ref}$ is the reference one.
+where $G_{run ID}$ is the gain in the considered run, and $G_{ref}$ is the reference one.
 
 \begin{figure*}[ht!!]
 \centering
@@ -29,16 +29,16 @@ where $Gain_{run ID}$ is the gain in the considered run, and $Gain_{ref}$ is the
 \begin{table*}[htbp!!]
 \centering
 \caption{Log of FOC data used in the analysis. For these runs HG data are considered. }
-\label{tab:FOC}
 \begin{tabular}{lccc}
 \hline\hline
-Run ID & Starting Date &  Expopsure & Number of events \\
+Run ID & Starting Date &  Exposure & Number of events \\
                & (year/month/day h:m:s) & (s)   \\
 \hline     
 1394 & 2018/12/02 20:01:09  &  & 60065     \\
 1763 & 2019/03/23 20:01:21  &  & 120123    \\ 
 \hline\hline
 \end{tabular}
+\label{tab:FOC}
 \end{table*}
 
 \subsection{Open sky data} 
@@ -48,11 +48,10 @@ Background data used for the analysis refer to the period between December 2018 
 A selection was applied in order to avoid data affected by technical problems as instability in the PDM signals or fluctuation of the trigger rate. Moreover, intervals with bad atmospheric conditions 
 (high humidity, low external temperature, cloudiness) were not considered as well as the periods when UVscope data are not available.
 
-In each detected events we considered only the nine central PDM (11, 12, 13, 18, 19, 20, 25, 26, 27 in Fig.~\ref{fig: camera} ) taking into account the smaller UVscope FOV.  In addition, bad pixels and pixels imaging stars with a magnitude higher than …, coherently with the procedure adopted for UVscope data, are excluded from the analysis. The position of the stars in ASTRI-Horn FOV is computed from the correspondence with UVscope pixels derived from the variance method (Segreto et al 2019). 
+In each detected events we considered only the nine central PDM (11, 12, 13, 18, 19, 20, 25, 26, 27 in Fig.~\ref{fig:camera} ) taking into account the smaller UVscope FOV.  In addition, bad pixels and pixels imaging stars with a magnitude higher than …, coherently with the procedure adopted for UVscope data, are excluded from the analysis. The position of the stars in ASTRI-Horn FOV is computed from the correspondence with UVscope pixels derived from the variance method \citep{Segreto2019}. 
 The variance method was not used to identify stars because the relative data were not available in December and, for uniformity in the analysis, we decide to not use it either in March.  However, March variance data were used to cross-check the positions obtained from the correspondence with UVscope pixels.
 
 \begin{table}[ht]
-\label{tab:astrilog}
 \caption{ASTRI-Horn observation log}
 \centering
 \begin{tabular}{lcccc}
@@ -103,15 +102,16 @@ Run ID & Starting Date & Exposure      & N. of events & pointing \\
 \hline\hline
 \multicolumn{5}{l}{$^*$ Azi$=180^\circ$ Elev. $=70^\circ$}
 \end{tabular}
+\label{tab:obslog}
 \end{table}
 
 
 
-Background pixels were identified applying the same double cut cleaning procedure used for the Cherenkov shower images. This procedure considers background pixels the ones that have a signal lower than a first threshold $S1$, or , if higher than $S1$, with none of the neighboring pixels with a signal higher that the second threshold $S2$. In our analysis, we adopted the values $S1$=6 and $S2$=12 used by Mineo et al. 2019 instead of higher values adopted for the analysis of Crab events (Lombarbi et al. 2018) to avoid muon signals.
+Background pixels were identified applying the same double cut cleaning procedure used for the Cherenkov shower images. This procedure considers background pixels the ones that have a signal lower than a first threshold $S1$, or , if higher than $S1$, with none of the neighboring pixels with a signal higher that the second threshold $S2$. In our analysis, we adopted the values $S1$=6 and $S2$=12 used by \cite{Mineo2019} instead of higher values adopted for the analysis of Crab events \citep{Lombardi2020} to avoid muon signals.
 
-For each event we then accumulated the distribution of the number of $p.e.$ in the background pixels. The curve obtained for the file 1473 of the run ID 000 is plotted in Fig.~\ref{fig:distr} as example. It is a distribution with a Gaussian shape in the central part and with long wings due to residual signals in the positive part and to … ???? in the negative one. 
+For each event we then accumulated the distribution of the number of $p.e.$ in the background pixels. The curve obtained for the file 1473 of the run ID 000 is plotted in Fig.~\ref{fig:distr} as example. It is a distribution with a Gaussian shape in the central part and with long wings due to residual signals in the positive part and to .... ???? in the negative one. 
 
-The central part of the distribution is then fitted with a Gaussian whose $\sigma$ is the measure of the NSB fluctuations that, being a Poissonian signal, is linked to the absolute flux. The RMS values for December 9—10 observation night are plotted in Fig.~\ref{fig:rms} as function of time.
+The central part of the distribution is then fitted with a Gaussian whose $\sigma$ is the measure of the NSB fluctuations that, being a Poisson signal, is linked to the absolute flux. The RMS values for December 9--10 observation night are plotted in Fig.~\ref{fig:rms} as function of time.
 
 Finally, we plot the resulting values of $\sigma$ for each observing night in Fig.\ref{fig:sigma}  as a function of time. 
 
@@ -119,7 +119,7 @@ Finally, we plot the resulting values of $\sigma$ for each observing night in Fi
 \subsection{Closed camera data} 
 
 As explained in Sect.~\ref{sect:intro}, the $\sigma$ of the background distribution is obtained by the sum of the intrinsic noise plus the fluctuations due to the NSB flux level. The first component can be obtained by events acquired with the camera lids closed in absence of light.
-Observations used for this analysis are listed in Table~\ref{tab:dark}. In this case, data from LG electronics chain are considered and pulse height spectra for each camera pixels are accumulated adding the contributiond of the two considered observations. These are mainly composed by a single peak, the pedestal, that is fitted with a Gaussian function whose $\sigma$ is the measurement of $\sigma_{dark}$. As example the distribution relative to one of the camera pixel in the run ID 1616 is plotted in Fig.~\ref{fig:dark}).
+Observations used for this analysis are listed in Table~\ref{tab:dark}. In this case, data from LG electronics chain are considered and pulse height spectra for each camera pixels are accumulated adding the contributions of the two considered observations. These are mainly composed by a single peak, the pedestal, that is fitted with a Gaussian function whose $\sigma$ is the measurement of $\sigma_{dark}$. As example the distribution relative to one of the camera pixel in the run ID 1616 is plotted in Fig.~\ref{fig:dark}.
 
 
 \begin{figure*}[h!!]
