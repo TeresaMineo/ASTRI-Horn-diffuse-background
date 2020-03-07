@@ -12,9 +12,11 @@ FOC data used for this paper data analyis are listed in Table~\ref{tab:FOC}; the
 The HG pulse hight distribution for each run listed in Table~\ref{tab:FOC} is accumulated and, for each pixel, the position of the maximum amplitude of each peak is computed. Figure~\ref{fig:FOC} shows the pulse height spectrum relative to pixel ... in the FOC run ...\tem{quale?}. The gain is computed comparing the average difference between two consecutive peaks centers, $p.e._{eq}$, with that produced by a reference gain $p.e._{ref}$:
 
 \begin{equation}
-Gain(run ID)=\frac{p.e._{eq}}{p.e._{ref}}Gain_{ref}
+Gain_{run ID}\,=\,\frac{p.e._{eq}}{p.e._{ref}}\,Gain_{ref}
 \end{equation}
-is computed excluding the first one, the pedestal, produced by the noise, and its ratio with the distance produced by a reference gain allow us to evaluste the gain:
+
+\noindent
+where $Gain_{run ID}$ is the gain in the considered run, and $Gain_{ref}$ is the reference one.
 
 
 
@@ -23,7 +25,7 @@ is computed excluding the first one, the pedestal, produced by the noise, and it
 
 \begin{figure*}[ht!!]
 \centering
-\includegraphics[angle=0, width=12.5cm]{PIXEL60_PDM20_HG_DICEMBRE_2018.eps}
+\includegraphics[angle=0, width=12.5cm]{figure/PIXEL60_PDM20_HG_DICEMBRE_2018.eps}
 \vspace{0.5cm}
 \caption{ Pulse height spectrum at a fixed temperature of 15$^\circ$C
 and $V_{0}$=57 V for a camera pixel, during a FOC run in the HG electronics chain. 
@@ -75,9 +77,6 @@ Observation ID & Starting Date & Exposure      & Number of events & pointing \\
 1453 & 2018/12/07 20:06:11  &   6016     & 348442 & Crab Off    \\
 1453 & 2018/12/07 20:06:11  &   6016     & 348442 & Crab Off    \\
 1453 & 2018/12/07 20:06:11  &   6016     & 348442 & Crab Off    \\
-
-
-
 1453 & 2018/12/07 20:06:11  &   6016     & 348442 & Crab Off    \\
 1454 & 2018/12/07 22:09:16  &   4377     & 226651 &  Crab \\ %226650  \\
 1455 & 2018/12/07 23:30:08  &   6243     & 412451 &  Crab \\ %412446    \\
@@ -116,9 +115,7 @@ Finally, we plot the resulting values of $\sigma$ for each observing night in Fi
 
 \subsection{Closed camera data} 
 
-
-
-
+As explained in Sect.~\ref{sect:intro}, the $\sigma$ of the background distribution is obtained by the sum of the intrinsic noise plus the fluctuations due to the NSB flux level. 
 Dark counts runs are acquired when the lids of the camera are closed.
 The light-tight lid, in addition to protecting the FSC, it ensures that no light can enter it when the lid is latched shut. In this way, it is possible to read out the pulse height of all the signals pixel for each triggered dark event.
 In absence of light, using the Low Gain electronics chain, the majority of events are  contained in one peak position, named pedestal. 
@@ -136,11 +133,7 @@ Run ID & Starting Date & Run type      & Number of events \\
                & (year/month/day h:m:s)   \\
 \hline     
 1380 & 2018/12/01 20:59:18  &   Dark    & 15305      \\
-1394 & 2018/12/02 20:01:09  &   FOC     & 60065     \\
 1616 & 2019/02/28 12:37:02  &   Dark    & 50000     \\
-1763 & 2019/03/23 20:01:21  &   FOC     & 120123    \\
-  
-
 \hline\hline
 \end{tabular}
 \end{table*}
