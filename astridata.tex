@@ -4,16 +4,21 @@
 \subsection{Gain evaluation}
 \label{subs:gain}
 
-A first step of the data analysis chain is the gain calibration of the camera pixels. 
-ASTRI-Horn camera is equipped with a thermal control system to monitor the temperature of the focal plane and coherently change the voltage applied to the SiPM in order to keep gain variation within a few ADC. In addition, a dedicated procedure is forseen to evaluate off-line the gain in each observing period with the accuracy required for the scientific analysis ({\tem mettere il valore} ADC). This method is based on the use of a side emitting fiber optics system (FOC) located along the PMMA window circumference and connected to a controlled intensity diode (LED) lightning  almost uniformly  the focal plane with an average intensity of a few $p.e.$ per pixel. FOC data are collected periodically during the normal telescope acquisition mode (???).
+A first step of the data analysis chain is the calibration of the camera pixel gains. 
+The ASTRI-Horn camera is equipped with a thermal control system to keep the temperature of the focal plane in a defined reange and to monitor it in order to coherently change the voltage applied to the FEE preamplifiers (???) and compensate any following  gain variations. In addition, a dedicated procedure is implemented to improve the level of the gain calibration up to 1\% with an off-line analysis. This method is based on the use of a side emitting fiber optics system (FOC) located along the PMMA window circumference and connected to a controlled intensity diode (LED. It lights almost uniformly the focal plane with an average intensity of a few $p.e.$ per pixel. FOC data are collected periodically during the normal telescope acquisition mode (???).
 
 FOC data used for this paper data analyis are listed in Table~\ref{tab:FOC}; they are relative to a fixed voltage $V_{0}$= 57 V {\tem di che?} and a temperature of 15$^\circ$C {\che vuol dire?}. For these acquisitions HG data are available.
 
-The pulse hight distribution for each considered run is accumulated and the  maximum amplitude 
-for all the recorded waveforms of a physical pixel. While the first peak is the pedestal, the following  ones are the single and multiple p.e. contributions. The distance between 
-the peaks allow to extract the conversion factor.
+The HG pulse hight distribution for each run listed in Table~\ref{tab:FOC} is accumulated and, for each pixel, the position of the maximum amplitude of each peak is computed. Figure~\ref{fig:FOC} shows the pulse height spectrum relative to pixel ... in the FOC run ...\tem{quale?}. The gain is computed comparing the average difference between two consecutive peak, $p.e._{eq}$ centers with that produced by a reference gain:
 
-Figure~\ref{fig:FOC} shows the HG pulse height spectrum acquired in the FOC run \tem{quale?}. 
+\begin{equation}
+Gain(run ID)=
+\end{equation}
+is computed excluding the first one, the pedestal, produced by the noise, and its ratio with the distance produced by a reference gain allow us to evaluste the gain:
+
+
+
+ 
 
 
 \begin{figure*}[ht!!]
@@ -33,7 +38,7 @@ multiple peaks Gaussian fit.}
 \label{tab:FOC}
 \begin{tabular}{lccc}
 \hline\hline
-Obs. ID & Starting Date &  Expopsure & Number of events \\
+Run ID & Starting Date &  Expopsure & Number of events \\
                & (year/month/day h:m:s) & (s)   \\
 \hline     
 1394 & 2018/12/02 20:01:09  &  & 60065     \\
