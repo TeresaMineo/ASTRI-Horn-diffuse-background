@@ -9,10 +9,10 @@ The ASTRI-Horn camera is equipped with a thermal control system to keep the temp
 
 FOC data used for this paper data analyis are listed in Table~\ref{tab:FOC}; they are relative to a fixed voltage $V_{0}$= 57 V {\tem di che?} and a temperature of 15$^\circ$C {\che vuol dire?}. For these acquisitions HG data are available.
 
-The HG pulse hight distribution for each run listed in Table~\ref{tab:FOC} is accumulated and, for each pixel, the position of the maximum amplitude of each peak is computed. Figure~\ref{fig:FOC} shows the pulse height spectrum relative to pixel ... in the FOC run ...\tem{quale?}. The gain is computed comparing the average difference between two consecutive peak, $p.e._{eq}$ centers with that produced by a reference gain:
+The HG pulse hight distribution for each run listed in Table~\ref{tab:FOC} is accumulated and, for each pixel, the position of the maximum amplitude of each peak is computed. Figure~\ref{fig:FOC} shows the pulse height spectrum relative to pixel ... in the FOC run ...\tem{quale?}. The gain is computed comparing the average difference between two consecutive peaks centers, $p.e._{eq}$, with that produced by a reference gain $p.e._{ref}$:
 
 \begin{equation}
-Gain(run ID)=
+Gain(run ID)=\frac{p.e._{eq}}{p.e._{ref}}Gain_{ref}
 \end{equation}
 is computed excluding the first one, the pedestal, produced by the noise, and its ratio with the distance produced by a reference gain allow us to evaluste the gain:
 
