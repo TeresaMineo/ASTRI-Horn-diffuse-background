@@ -18,8 +18,10 @@ A scheme of the disposition of the PDM is presented in Fig.~\ref{fig:camera}, wh
 \label{fig:camera}
 \end{figure}
 
-Each PDM is composed of 8$\times$8 side-by-side Silicon photomultipliers (SiPMs). The front-end electronics (FEE) is composed by two application specific integrated circuits (ASIC), CITIROC. This represent an innovative solution to acquire the SiPM output signals  being based on a custom peak-detector operation mode rather than the usually adopted sampling technique \citep{Sottile2016}. Two separate electronics chains allow for high- and low-gain (HG and LG). The outputs of all the channels can be read out by multiplexing, in parallel, the analog buffers of the HG and LG chains in two external analog-to-digital converter (ADC). During ASTRI-Horn verification phase, only scientific data from LG chain were available.
-
+Each PDM is composed of 8$\times$8 side-by-side Silicon photomultipliers (SiPMs). The front-end electronics (FEE) is composed by two application specific integrated circuits (ASIC), CITIROC. This represent an innovative solution to acquire the SiPM output signals  being based on a custom peak-detector operation mode rather than the usually adopted sampling technique \citep{Sottile2016}. 
+Two separate electronics chains allow for high- and low-gain (HG and LG). The outputs of all  channels is read out by multiplexing, in parallel, the analog buffers of the HG and LG chains in two external analog-to-digital converter (ADC).
+The signal is amplified by the programmable preamplifiers one relative to each chain and then shaped with a constant
+shaping time of 37.5 ns and, in peak detector mode, the maximum of the shaped pulse height is registered. 
 
 This FEE-FPGA manages the the generation of local trigger, a topological one, activated when a given number of contiguous pixels within a PDM presents a signal above a given photo-electron threshold \citep{Sottile2016}.
 The back-end electronics (BEE) is the main elaboration unit of the camera which controls and manages the overall system, including data, and all ancillaries used to perform operations as
