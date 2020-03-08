@@ -105,16 +105,30 @@ Run ID & Starting Date & Exposure      & N. of events & pointing \\
 \label{tab:obslog}
 \end{table}
 
-
-
 Background pixels were identified applying the same double cut cleaning procedure used for the Cherenkov shower images. This procedure considers background pixels the ones that have a signal lower than a first threshold $S1$, or , if higher than $S1$, with none of the neighboring pixels with a signal higher that the second threshold $S2$. In our analysis, we adopted the values $S1$=6 and $S2$=12 used by \cite{Mineo2019} instead of higher values adopted for the analysis of Crab events \citep{Lombardi2020} to avoid muon signals.
 
-For each event we then accumulated the distribution of the number of $p.e.$ in the background pixels. The curve obtained for the file 1473 of the run ID 000 is plotted in Fig.~\ref{fig:distr} as example. It is a distribution with a Gaussian shape in the central part and with long wings due to residual signals in the positive part and to \tem {????} in the negative one. 
+For each file we then accumulated the distribution of the number of $p.e.$ in the background pixels. The curve obtained for the file 1473 of the run ID 000 is plotted in Fig.~\ref{fig:distr} as example. It is a distribution with a Gaussian shape in the central part and with long wings due to residual signals in the positive part and to \tem {????} in the negative one. 
 
 The central part of the distribution is then fitted with a Gaussian whose $\sigma$ is the measure of the NSB fluctuations that, being a Poisson signal, is linked to the absolute flux. The RMS values for December 9--10 observation night are plotted in Fig.~\ref{fig:rms} as function of time.
 
-Finally, we plot the resulting values of $\sigma$ for each observing night in Fig.\ref{fig:sigma}  as a function of time. 
+\begin{figure*}[ht!!]
+\centering
+\includegraphics[angle=0, width=12.5cm]{Figure/bkg_histo_1473_000.pdf}
+\vspace{0.5cm}
+\caption{Distribution od background counts relative to one of the file of the run ID 1473 with superimposed the Gaussian fit  }
+\label{fig:FOC}
+\end{figure*}
 
+Finally, we plot the resulting values of $\sigma$ for each observing night in Fig.\ref{fig:sigma}  as a function of time. 
+\tem{Abbiamo discusso con Alessio la presentazione di questi risultati e non è chiaro per noi se mettere una tabella o i plot in funzione del tempo come quelli della figura seguente}
+
+\begin{figure*}[ht!!]
+\includegraphics[angle=0, width=10.5cm]{Figure/ASTRI_bkg_20181208_20181209.pdf}
+\includegraphics[angle=0, width=10.5cm]{Figure/ASTRI_bkg_20180305_20180306.pdf}
+\vspace{0.5cm}
+\caption{Values of $\sigma$ relative to the observing night December 8--9 (left panel) and March 5-6 (right panel) as function of time. }
+\label{fig:FOC}
+\end{figure*}
 
 \subsection{Closed camera data} 
 
